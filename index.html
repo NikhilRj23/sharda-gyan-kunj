@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शारदा ज्ञान कुंज | ज्ञान से सशक्तिकरण, उज्जवल भविष्य का निर्माण</title>
+    <style>
+        /* --- रिसेट और बेस स्टाइल्स --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            /* आपके लोगो के रंगों के आधार पर अपडेटेड थीम (मैरून और गोल्डन) */
+            --primary-color: #5c0931; /* लोगो का मैरून रंग */
+            --secondary-color: #f7d038; /* लोगो का पीला/गोल्डन रंग */
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #fdfafb;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- हेडर और नेविगेशन --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 5%;
+        }
+
+        /* लोगो कंटेनर की स्टाइलिंग */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* दोनों इमेजेस के बीच की दूरी */
+        }
+
+        /* मुख्य गोल लोगो इमेज के लिए */
+        .logo-icon-img {
+            height: 55px; /* गोल लोगो का साइज */
+            width: auto;
+            object-fit: contain;
+            border-radius: 50%; /* इसे गोल रखने के लिए */
+        }
+
+        /* नाम वाली इमेज का कंटेनर */
+        .logo-text-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* स्कूल के नाम वाली लंबी इमेज के लिए */
+        .logo-name-img {
+            height: 35px; /* नाम वाली इमेज को गोल लोगो से थोड़ा छोटा रखा है ताकि यह आकर्षक लगे */
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* लोगो के लिए स्पेशल स्टाइल
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 60px; 
+            width: auto;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        } */
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c99a02;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white) !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #3d031f;
+        }
+
+        /* --- हीरो सेक्शन --- */
+        .hero {
+            background: linear-gradient(rgba(92, 9, 49, 0.75), rgba(92, 9, 49, 0.75)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.8rem 2rem;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .hero .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- हमारे बारे में और आँकड़े --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .about-text h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-container {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-item h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+        }
+
+        /* --- शैक्षणिक कार्यक्रम --- */
+        .academics {
+            background-color: var(--bg-light);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .card-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- गैलरी --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 6px;
+            height: 200px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* --- संपर्क और फुटर --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #2b0215;
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 0 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+        }
+
+        /* --- रिस्पॉन्सिव डिजाइन --- */
+        @media (max-width: 968px) {
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; 
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <!-- <a href="#home" class="logo-container">
+                <img src="logo.png" alt="शारदा ज्ञान कुंज लोगो" class="logo-img"> 
+                <span class="logo-text">
+                    <img src="name.png" alt="शारदा ज्ञान कुंज" class="logo-img"> 
+                </span>
+                <span class="logo-text">शारदा ज्ञान कुंज</span>
+            </a> -->
+            <a href="#home" class="logo-container">
+                <img src="logo.png" alt="शारदा ज्ञान कुंज लोगो" class="logo-icon-img"> 
+                
+                <span class="logo-text-container">
+                    <img src="name-cbse.png" alt="शारदा ज्ञान कुंज" class="logo-name-img"> 
+                </span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">मुख्य पृष्ठ</a></li>
+                <li><a href="#about">हमारे बारे में</a></li>
+                <li><a href="#academics">पाठ्यक्रम</a></li>
+                <li><a href="#gallery">गैलरी</a></li>
+                <li><a href="#contact">संपर्क करें</a></li>
+                <li><a href="#contact" class="cta-btn">प्रवेश लें</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ज्ञान से सशक्तिकरण, उज्जवल भविष्य का निर्माण</h1>
+            <p>हमारा उद्देश्य कॉपी का निर्माण करना नहीं , बल्कि विवेक और व्यक्तित्व का निर्माण करना है। हम विद्यार्थियों को वैश्विक समाज में नेतृत्व करने के लिए तैयार करते हैं।</p>
+            <a href="#about" class="btn">अधिक जानें</a>
+        </div>
+    </section>
+    
+    <section id="about" class="container">
+        <h2 class="section-title">हमारे विद्यालय में आपका स्वागत है</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>सुविधायें  :-</h3>
+                <ul>
+                    <li><span class="arrow">☛</span> अनुभवी शिक्षक एवं शिक्षिकाएं।</li>
+                    <li><span class="arrow">☛</span> सर्वोत्तम शिक्षा और रचनात्मकता।</li>
+                    <li><span class="arrow">☛</span> बेहतर एवं आधुनिक कक्षाएं।</li>
+                    <li><span class="arrow">☛</span> गतिविधि आधारित शिक्षा प्रणाली।</li>
+                    <li><span class="arrow">☛</span> इन्डोर और आउटडोर गतिविधियाँ।</li>
+                    <li><span class="arrow">☛</span> बच्चों का सर्वांगीण विकास सुनिश्चित करना।</li>
+                    <li><span class="arrow">☛</span> स्मार्ट क्लास की सुविधा वाले क्लासरूम।</li>
+                    <li><span class="arrow">☛</span> नवोदय प्रवेश परीक्षा के लिए अलग से वर्ग का संचालन होगा।</li>
+                </ul>
+            </div>
+            <div class="about-image" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                <img src="addmision-free.png" alt="Admission Free" style="border-radius: 8px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); width: 100%; max-width: 250px; height: auto;">
+                <img src="Addmission-Open.png" alt="Admission Open" style="border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 100%; max-width: 400px; height: auto;">
+            </div>
+            <div class="about-image">
+                <img src="school-study.png" alt="कक्षा में छात्र" style="border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h2>100+</h2>
+                <p>सक्रिय छात्र</p>
+            </div>
+            <div class="stat-item">
+                <h2>10+</h2>
+                <p>अनुभवी शिक्षक</p>
+            </div>
+            <div class="stat-item">
+                <h2>10:1</h2>
+                <p>छात्र-शिक्षक अनुपात</p>
+            </div>
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>सफलता दर</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="academics" class="academics">
+        <div class="container">
+            <h2 class="section-title">हमारे शैक्षणिक कार्यक्रम</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=400&q=80" alt="प्राथमिक शिक्षा">
+                    <div class="card-content">
+                        <h3>प्राथमिक विद्यालय (Primary)</h3>
+                        <p>खेल-खेल में और संवादात्मक शिक्षण के माध्यम से बुनियादी साक्षरता, अंकगणित और सामाजिक कौशल पर ध्यान केंद्रित करना।</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=400&q=80" alt="मिडल स्कूल">
+                    <div class="card-content">
+                        <h3>माध्यमिक विद्यालय (Middle)</h3>
+                        <p>छात्रों को आत्मनिर्भर बनाने के साथ-साथ उनमें तार्किक सोच, वैज्ञानिक दृष्टिकोण और सहयोगात्मक प्रोजेक्ट्स को बढ़ावा देना।</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80" alt="हाई स्कूल">
+                    <div class="card-content">
+                        <h3>उच्चतर माध्यमिक (High School)</h3>
+                        <p>एडवांस्ड कोर्सेस, करियर काउंसलिंग और देश-विदेश के शीर्ष विश्वविद्यालयों में प्रवेश के लिए मजबूत तैयारी।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="gallery" class="container">
+        <h2 class="section-title">कैंपस की झलकियाँ (गैलरी)</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=400&q=80" alt="स्कूल लाइब्रेरी">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=400&q=80" alt="स्कूल बिल्डिंग">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1516534775068-ba3e84589d90?auto=format&fit=crop&w=400&q=80" alt="कंप्यूटर लैब">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=400&q=80" alt="आर्ट क्लास">
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact" class="container">
+        <h2 class="section-title">संपर्क करें</h2>
+        <div class="contact-grid">
+            <div>
+                <h3>हमसे जुड़ें</h3>
+                <p style="margin: 1rem 0 2rem; color: var(--text-light);">प्रवेश प्रक्रिया के बारे में कोई सवाल हो या स्कूल कैंपस देखने आना चाहते हों? फॉर्म भरें या नीचे दिए गए विवरण के माध्यम से सीधे हमसे संपर्क करें।</p>
+                <p>📍 <strong>पता:</strong>  Near Koshi Colony Gate, Kaithinia Road, Jhanjharpur (R.S.)</p>
+                
+                <p style="margin: 0.5rem 0;">👤 <strong>Director:</strong>Kishor Bhaiji</p>
+                <p style="margin: 0.5rem 0;">📞 <strong>Mobile:</strong> +91 85399 00406</p>
+                <p style="margin: 0.5rem 0;">👤 <strong>Managed By:</strong> Nishant Sir</p>
+                <p style="margin: 0.5rem 0;">📞 <strong>Mobile:</strong> +91 78708 21006</p>
+                <!-- <p>✉️ <strong>ईमेल:</strong> info@shardagyankunj.edu</p> -->
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('आपका संदेश सफलतापूर्वक भेज दिया गया है!');">
+                <div class="form-group">
+                    <input type="text" placeholder="आपका नाम" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="आपका ईमेल" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="आपका संदेश" required></textarea>
+                </div>
+                <button type="submit">संदेश भेजें</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>शारदा ज्ञान कुंज</h4>
+                <p>युवा दिमागों को गंभीर रूप से सोचने, नैतिक रूप से कार्य करने और करुणा के साथ सेवा करने के लिए प्रेरित करना।</p>
+            </div>
+            <div class="footer-col">
+                <h4>त्वरित लिंक</h4>
+                <ul>
+                    <li><a href="#about">हमारे बारे में</a></li>
+                    <li><a href="#academics">शैक्षणिक कार्यक्रम</a></li>
+                    <li><a href="#gallery">कैंपस गैलरी</a></li>
+                    <li><a href="#">प्रवेश जानकारी</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>पोर्टल्स</h4>
+                <ul>
+                    <li><a href="#">अभिभावक पोर्टल</a></li>
+                    <li><a href="#">छात्र पोर्टल</a></li>
+                    <li><a href="#">स्टाफ लॉगिन</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 शारदा ज्ञान कुंज। सर्वाधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+
+</body>
+</html>
